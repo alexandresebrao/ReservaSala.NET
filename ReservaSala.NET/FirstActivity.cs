@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Parse;
 
 namespace ReservaSala.NET
 {
@@ -19,6 +20,15 @@ namespace ReservaSala.NET
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
+
+			SetContentView(Resource.Layout.HomePage);
+
+			TextView lblWelcome = FindViewById<TextView>(Resource.Id.lblWelcome);
+
+			ParseUser currentUser = ParseUser.CurrentUser;
+			string welcome = "Bem vindo " + currentUser.Get<String>("username");
+			lblWelcome.Text = welcome;
+
 
 
 		}

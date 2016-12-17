@@ -25,8 +25,8 @@ namespace ReservaSala.NET
 			// Get the TextView To login
 			Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
 			Button btnRegistrar = FindViewById<Button>(Resource.Id.btnRegistrar);
-			TextView txtUsername = FindViewById<TextView>(Resource.Id.txtLogin);
-			TextView txtPassword = FindViewById<TextView>(Resource.Id.txtPassword);
+			EditText txtUsername = FindViewById<EditText>(Resource.Id.txtLogin);
+			EditText txtPassword = FindViewById<EditText>(Resource.Id.txtPassword);
 
 			btnLogin.Click += delegate
 			{
